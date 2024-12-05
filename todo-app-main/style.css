@@ -1,0 +1,63 @@
+*   {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body  {
+    background: hsl(235, 21%, 11%);
+}
+.top-img  {
+    width: 100%;
+    height: 225px;
+    background-size: cover;
+    background-image: url(images/bg-mobile-dark.jpg);
+}
+main  {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    padding: 25px;
+}
+.header     {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    letter-spacing: 10px;
+    padding-top: 10px;
+}
+.tgl-btn    {
+    background: url(images/icon-sun.svg);
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+}
+.type-todo  {
+    margin-top: 24px;
+    width: 100%;
+    background: var(--bg-dark);
+    padding: 10px;
+    height: 55px;
+    display: grid;
+    grid-template-columns: 10% auto;
+    align-items: center;
+}
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid hsl(237, 14%, 26%);
+}
+#todo-imput {
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    border: none;
+    color: var(--fg-dark);
+    caret-color: hsl(228, 98%, 61%);
+}
+#todo-input {
+    outline: none;
+}
