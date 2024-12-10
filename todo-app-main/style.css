@@ -9,7 +9,7 @@ body    {
 }
 
 *   {
-  box-sizing: border-box;  
+  box-sizing:border-box;  
 }
 
 img {
@@ -46,7 +46,6 @@ body {
     color: var(--font-color);   
     }
 
-header.
 main {
     max-width: 545px;
     margin: auto;
@@ -125,8 +124,8 @@ ul  {
 }
 
 ul li   {
-    padding:0 10px 0 25px;
-    min-height: 65px;
+    padding: 25px;px;
+    min-height: 25px;
     border-bottom: 1px solid var(--font-color);
     position: relative;
 }
