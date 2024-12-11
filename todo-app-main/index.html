@@ -3,42 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-  <title>Frontend Mentor | Todo app</title>
+  <title>Frontend Mentor | Todo App</title>
 
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="theme-dark">
-<header class="flex.row">
-  <h1>TODO</h1>
-  <div class="theme-black">
-    <input type="checkbox" name="theme" id="theme">
-    <label for="theme"></label>
-  </div>
-</header>
+  <header class="flex-row">
+    <h1>TODO</h1>
+    <div class="theme-black">
+      <input type="checkbox" name="theme" id="theme">
+      <label for="theme"></label>
+    </div>
+  </header>
 
-<main>
-  <div class="add-new-item flex-row">
-    <span></span>
-    <input type="text" placeholder="create a new todo..." name="additem" id="additem">
-  </div>
-  <section class="content">
-    <ul>
-      <li class="flex-row">
-        <label class="list-item">
-          <input type="checkbox" name="todoitem">
-          <span class="checkmark"></span>
-          <span class="text">tex 1</span>
-        </label>
-        <span class="remove"></span>
-      </li>
-        <li class="flex row">
+  <main>
+    <div class="add-new-item flex-row">
+      <span></span>
+      <input type="text" placeholder="Create a new todo..." name="additem" id="additem">
+    </div>
+    
+    <section class="content">
+      <ul>
+        <li class="flex-row">
           <label class="list-item">
-            <input type="checkbox" name="todo-item">
+            <input type="checkbox" name="todoitem">
             <span class="checkmark"></span>
-            <span class="text">tex 2</span>
+            <span class="text">Text 1</span>
           </label>
           <span class="remove"></span>
         </li>
@@ -46,7 +38,7 @@
           <label class="list-item">
             <input type="checkbox" name="todoitem">
             <span class="checkmark"></span>
-            <span class="text">tex 3</span>
+            <span class="text">Text 2</span>
           </label>
           <span class="remove"></span>
         </li>
@@ -54,7 +46,7 @@
           <label class="list-item">
             <input type="checkbox" name="todoitem">
             <span class="checkmark"></span>
-            <span class="text">tex 4</span>
+            <span class="text">Text 3</span>
           </label>
           <span class="remove"></span>
         </li>
@@ -62,7 +54,7 @@
           <label class="list-item">
             <input type="checkbox" name="todoitem">
             <span class="checkmark"></span>
-            <span class="text">tex 5</span>
+            <span class="text">Text 4</span>
           </label>
           <span class="remove"></span>
         </li>
@@ -70,33 +62,46 @@
           <label class="list-item">
             <input type="checkbox" name="todoitem">
             <span class="checkmark"></span>
-            <span class="text">tex 6</span>
+            <span class="text">Text 5</span>
+          </label>
+          <span class="remove"></span>
+        </li>
+        <li class="flex-row">
+          <label class="list-item">
+            <input type="checkbox" name="todoitem">
+            <span class="checkmark"></span>
+            <span class="text">Text 6</span>
           </label>
           <span class="remove"></span>
         </li>
       </ul>
-  </section>
-  <div class="botton-items flex-row">
-    <div class="items-left"><span></span>items-left</div>
-    <div class="filter flex-row">
-      <label>
-        <input type="radio" name="filter" id="all" checked>
-        <span>All</span>
-      </label>
-      <label>
-        <input type="radio" name="filter" id="active">
-        <span>Active</span>
-      </label>
-      <label>
-        <input type="radio" name="filter" id="Completed">
-        <span>Completed</span>
-      </label>
-      <label>
-      
-        <input type="radio" name="filter" id=" clear Completed">
-        <span>Clear completed</span>
-  </div>
-</main>
-    <script src="./script.js"></script>  
+    </section>
+    
+    <div class="bottom-items flex-row">
+      <div class="items-left">
+        <span>6</span> items left
+      </div>
+      <div class="filter flex-row">
+        <label>
+          <input type="radio" name="filter" id="all" checked>
+          <span>All</span>
+        </label>
+        <label>
+          <input type="radio" name="filter" id="active">
+          <span>Active</span>
+        </label>
+        <label>
+          <input type="radio" name="filter" id="completed">
+          <span>Completed</span>
+        </label>
+        <label>
+          <input type="radio" name="filter" id="clear-completed">
+          <span>Clear completed</span>
+        </label>
+      </div>
+    </div>
+  </main>
+
+  <script src="./script.js"></script>
 </body>
 </html>
