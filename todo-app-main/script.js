@@ -1,5 +1,3 @@
-// JavaScript for Todo App
-
 document.addEventListener("DOMContentLoaded", () => {
   const themeCheckbox = document.getElementById("theme");
   const body = document.body;
@@ -8,13 +6,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const clearCompleted = document.getElementById("clearCompleted");
   const filters = document.querySelectorAll(".filter input");
 
-  // Toggle Theme
+  
   themeCheckbox.addEventListener("change", () => {
     body.classList.toggle("theme-light");
     body.classList.toggle("theme-dark");
   });
 
-  // Add new item
+  
   addItemInput.addEventListener("keypress", (event) => {
     if (event.key === "Enter" && addItemInput.value.trim()) {
       const newItem = createTodoItem(addItemInput.value.trim());
@@ -23,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Create Todo Item
   function createTodoItem(text) {
     const li = document.createElement("li");
     li.classList.add("flex-row");
@@ -60,7 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
     return li;
   }
 
-  // Update Item Counts
   function updateCounts() {
     const itemsLeft = document.querySelector(".items-left span");
     const totalItems = todoList.querySelectorAll("li").length;
@@ -68,7 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
     itemsLeft.textContent = `${totalItems - completedItems} items left`;
   }
 
-  // Filter Items
   filters.forEach((filter) => {
     filter.addEventListener("change", () => {
       const filterId = filter.id;
@@ -88,7 +83,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Clear Completed Items
   clearCompleted.addEventListener("click", () => {
     const completedItems = todoList.querySelectorAll("input[type='checkbox']:checked");
     completedItems.forEach((item) => {
