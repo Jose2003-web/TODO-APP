@@ -48,8 +48,14 @@ body {
 
 main {
     max-width: 545px;
-    margin: auto;
+    margin: 0 auto;
 }
+
+header  {
+    justify-content: space-between;
+    padding: 54px 0 11px;
+}
+
 h1  {
     font-weight: 700;
     font-size: 2.5rem;
@@ -107,8 +113,9 @@ h1  {
 }
 
 .add-new-item span:hover    {
-    background: center url(images/icon-check.svg) no-repeat,
-    linear-gradient hsl(135deg, hsl(192, 100%, 67%) to hsl(280, 87%, 65%))
+    background: center url(images/icon-check.svg) no-repeat, 
+    linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+
 }
 
 .content    {
@@ -124,11 +131,126 @@ ul  {
 }
 
 ul li   {
-    padding: 25px;px;
+    padding: 25px;
     min-height: 25px;
     border-bottom: 1px solid var(--font-color);
     position: relative;
 }
-    
+
+ul li input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+}
+
+ul li label {
+    position: relative;
+    cursor: pointer;
+    padding: 2px 0 0 45px;
+    font-size: 1.1rem; 
+}
+
+.checkmark  {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+}
+
+ul li.hidden        {
+    display: none;
+}
+
+.checkmark  {
+    border: 1px solid var(--font-color);
+    border-radius: 50px;
+}
+
+ul li input[type="checkbox"] ~ .checkmark:hover {
+    border: 0;
+padding: 1px;
+background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+ul li input[type="checkbox"].checkmark:hover::before {
+    content: ;
+    width: 23px;
+    height: 21px;
+    border-radius: 50%;
+    background: var(--todo-bg);
+    display: block;
+}
+
+ul li input[type="checkbox"]:checked ~ .checkmark {
+    background: center url(images/icon-check.svg) no-repeat,
+      linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+ul li input[type="checkbox"]:checked ~ .text  {
+    text-decoration: line-through;
+}
+
+.remove {
+    background:  url(images/icon-cross.svg) no-repeat;
+    width: 18px;
+    height: 18px;
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+}
+
+ul li:hover .remove {
+    display: block;
+}
+
+.items-left {
+    margin-right: 86px;
+}
+
+.bottom-items {
+    padding: 20px 20px 20px 27px;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    align-items: baseline;
+    border-radius: 5px;
+    background: var(--todo-bg);
+}
+
+.filter{
+    margin-right: 47px;
+}
+
+.filter input [type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.filter label:hover {
+    color: var(--font-color-hover);
+}
+
+filter input[type="radio"]:checked ~ span {
+    color: hsl(221, 62%, 51%);
+}
+
+.clear  {
+    color: var(--font-color);
+    cursor: pointer;
+}
+
+.clear:hover    {
+    color: var(--font-color-hover);
+}
+
+
+
 
 
